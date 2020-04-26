@@ -13,9 +13,6 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
-% This is vectorized version of J's computation
-% Note that we are using element-wise square ( .^ ) instead of matrix
-% multiplicationi ( ^ ).
 prediction = X * theta;
 squareError = (prediction - y) .^ 2;
 J = 1 / (2 * m) * sum(squareError);

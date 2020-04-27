@@ -31,8 +31,7 @@ m = size(X, 1);       % returns the number of rows in X
 muMatrix = ones(m, 1) * mu ; 
 sigmaMatrix = ones(m, 1) * sigma;
 
-
-
+X_norm = (X - mu_matrix) ./ sigma_matrix;
 
 
 

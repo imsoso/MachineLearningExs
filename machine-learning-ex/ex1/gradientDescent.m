@@ -26,6 +26,7 @@ for iter = 1:num_iters
     prediction = X * theta;
     error = prediction - y;
     thetaChange = alpha / m * X' * error
+    theta = theta - thetaChange
     % ============================================================
 
     % Save the cost J in every iteration    

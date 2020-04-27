@@ -27,6 +27,9 @@ sigma = zeros(1, size(X, 2));
 %       
 mu = mean(X);
 sigma = std(X);
+m = size(X, 1);       % returns the number of rows in X
+muMatrix = ones(m, 1) * mu ; 
+sigmaMatrix = ones(m, 1) * sigma;
 
 
 

@@ -20,6 +20,7 @@ grad = zeros(size(theta));
 % Note: grad should have the same dimensions as theta
 %
 
+prediction = sigmoid(X * theta);
 
 
 

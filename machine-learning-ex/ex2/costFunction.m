@@ -26,6 +26,8 @@ J = 1 /  m * logError;
 
 
 
+% Gradient
+error = prediction - y;
 
 
 

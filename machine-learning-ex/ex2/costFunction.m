@@ -21,6 +21,7 @@ grad = zeros(size(theta));
 %
 
 prediction = sigmoid(X * theta);
+logError = - y' * log(prediction) - (1 - y)' * log(1 - prediction);
 
 
 

@@ -26,6 +26,9 @@ originalJ = 1 /  m * logError;
 theta(1) = 0;
 J = originalJ + lambda / 2 / m * theta' * theta
 
+% Gradient
+error = prediction - y;
+oringinalGrad = 1 / m * X' * error;
 
 
 

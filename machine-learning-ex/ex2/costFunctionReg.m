@@ -21,6 +21,9 @@ prediction = sigmoid(X * theta);
 logError = - y' * log(prediction) - (1 - y)' * log(1 - prediction);
 originalJ = 1 /  m * logError;
 
+% We want the regularization to exclude the bias feature, so we can set theta(1) to zero
+% or change the whole vector theta1 = [0 ; theta(2:size(theta), :)];
+theta(1) = 0;
 
 
 

@@ -29,6 +29,7 @@ J = originalJ + lambda / 2 / m * theta' * theta
 % Gradient
 error = prediction - y;
 oringinalGrad = 1 / m * X' * error;
+grad = oringinalGrad + lambda / m * theta;
 
 
 

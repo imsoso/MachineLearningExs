@@ -21,6 +21,7 @@ p = zeros(size(X, 1), 1);
 %       can use max(A, [], 2) to obtain the max for each row.
 %
 a1Bias = [ones(m, 1) X];
+a2 = sigmoid(a1Bias * Theta1');
 
 
 

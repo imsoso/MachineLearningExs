@@ -25,6 +25,7 @@ a2 = sigmoid(a1Bias * Theta1');
 
 a2Bias = [ones(m, 1) a2];
 a3 = sigmoid(a2Bias * Theta2');
+[maxValue, p] = max(a3,[],2);
 
 
 

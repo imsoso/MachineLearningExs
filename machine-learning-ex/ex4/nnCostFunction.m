@@ -81,6 +81,9 @@ a2 = [ones(m, 1) a2];
 z3 = a2 * Theta2';
 a3 = sigmoid(z3);
 
+% Expand the 'y' output values into a matrix of single values
+eye_matrix = eye(num_labels);
+y_matrix = eye_matrix(y,:);
 
 
 

@@ -89,6 +89,8 @@ y_matrix = eye_matrix(y,:);
 
 
 
+% Caculate J
+J = 1 /m * sum(sum(-y_matrix .* log(a3) - (1 - y_matrix) .* log(1 - a3)));
 
 
 

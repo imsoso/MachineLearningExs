@@ -98,6 +98,7 @@ regularizedTheta2 = Theta2(:,2:size(Theta2,2));
 penalty =  sum(sum(regularizedTheta1.^2 )) + sum(sum(regularizedTheta2.^2 ));
 
 
+J = J + lambda / 2 / m * penalty;
 % -------------------------------------------------------------
 
 % =========================================================================

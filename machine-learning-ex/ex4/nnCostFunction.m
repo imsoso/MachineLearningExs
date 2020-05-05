@@ -119,6 +119,10 @@ for i = 1:m
     
     % activation unit (this can be matrix or vector, depending on output of sigmoid)
     a3_t = sigmoid(z3_t);
+    
+    % compute output error
+    y_t = y_matrix(i , :);
+    delta_3 = (a3_t - y_t);
 end
 
 % =========================================================================

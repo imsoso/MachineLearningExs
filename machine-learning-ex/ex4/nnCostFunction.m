@@ -133,8 +133,8 @@ end
 % derivatives. Note that for regularization these will have to
 % removed/commented out.
 
-Theta2_grad = Theta2_grad ./ m;
-Theta1_grad = Theta1_grad ./ m;
+%Theta2_grad = Theta2_grad / m;
+%Theta1_grad = Theta1_grad / m;
 
 % Part 3: Implement regularization with the cost function and gradients.
 %

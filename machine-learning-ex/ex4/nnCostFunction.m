@@ -134,6 +134,14 @@ for i = 1:m
     Theta1_grad = Theta1_grad + delta_2' * x_t;
     Theta2_grad = Theta2_grad + delta_3' * a2_t;
 end
+ 
+% Now divide everything (element-wise) by m to return the partial
+% derivatives. Note that for regularization these will have to
+% removed/commented out.
+
+Theta2_grad = Theta2_grad ./ m;
+Theta1_grad = Theta1_grad ./ m;
+
 
 % =========================================================================
 

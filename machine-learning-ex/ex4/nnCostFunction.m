@@ -129,6 +129,10 @@ for i = 1:m
     
     % ignore the bias term and calculate error for layer 2
     delta_2 = tmp(2:end , :)' .* sigmoidGradient(z2_t);
+    
+    % Transition matrix error accumulators
+    Theta1_grad = Theta1_grad + delta_2' * x_t;
+    Theta2_grad = Theta2_grad + delta_3' * a2_t;
 end
 
 % =========================================================================

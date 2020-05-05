@@ -143,6 +143,9 @@ end
 %               the regularization separately and then add them to Theta1_grad
 %               and Theta2_grad from Part 2.
 %
+% don't regularize the bias - we are replacing zero vector in Theta matrix
+Theta1_grad = (1 / m) * Theta1_grad + (lambda / m) * [zeros(size(Theta1, 1), 1), Theta1(: , 2:end)];
+Theta2_grad = (1 / m) * Theta2_grad + (lambda / m) * [zeros(size(Theta2, 1), 1), Theta2(: , 2:end)];
 
 % =========================================================================
 

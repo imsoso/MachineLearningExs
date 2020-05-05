@@ -75,7 +75,7 @@ y_matrix = eye_matrix(y,:);
 
 
 % Caculate J
-J = 1 /m * sum(sum(-y_matrix .* log(a3) - (1 - y_matrix) .* log(1 - a3)));
+J = 1 / m * sum(sum(-y_matrix .* log(a3) - (1 - y_matrix) .* log(1 - a3)));
 
 % Toss the first columns of each Theta(i) matrix.
 regularizedTheta1 = Theta1(:,2:size(Theta1,2));

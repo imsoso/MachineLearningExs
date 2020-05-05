@@ -102,6 +102,24 @@ J = J + lambda / 2 / m * penalty;
 %               first time.
 %
 % -------------------------------------------------------------
+% Backpropagation
+for i = 1:m
+    % Forward propagation
+    x_t = X(i, :);
+    x_t = [1, x_t]; % add bias 
+    
+    % ======= LAYER 2 =======
+    z2_t = x_t * Theta1';
+    a2_t = sigmoid(z2_t);% add bias to vector a2_t
+    a2_t = [1 , a2_t];
+    
+    % ======= LAYER 3 =======
+    % sigmoid input (can be vector or matrix - depending on Theta2)
+    z3_t = a2_t * Theta2';
+    
+    % activation unit (this can be matrix or vector, depending on output of sigmoid)
+    a3_t = sigmoid(z3_t);
+end
 
 % =========================================================================
 

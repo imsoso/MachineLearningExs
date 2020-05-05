@@ -123,6 +123,9 @@ for i = 1:m
     % compute output error
     y_t = y_matrix(i , :);
     delta_3 = (a3_t - y_t);
+    
+    % compute hidden layer error
+    tmp = Theta2' * delta_3';
 end
 
 % =========================================================================

@@ -126,6 +126,9 @@ for i = 1:m
     
     % compute hidden layer error
     tmp = Theta2' * delta_3';
+    
+    % ignore the bias term and calculate error for layer 2
+    delta_2 = tmp(2:end , :)' .* sigmoidGradient(z2_t);
 end
 
 % =========================================================================

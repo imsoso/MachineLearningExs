@@ -26,7 +26,10 @@ J = 1 / (2 * m) * sum(squareError);
 theta(1) = 0;
 J = J + lambda / 2 / m * theta' * theta
 
-
+% Gradient
+error = prediction - y;
+grad = 1 / m * X' * error;
+grad = grad + lambda / m * theta;
 
 
 

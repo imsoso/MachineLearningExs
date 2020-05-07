@@ -66,5 +66,6 @@ error_val   = zeros(m, 1);
     for i=1:m
         x_i = X(1:i,:);
         y_i = y(1:i);
+        theta = trainLinearReg(x_i, y_i, lambda);
     end
 end

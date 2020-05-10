@@ -27,12 +27,20 @@ sigma = 0.3;
 
 
 values = [0.01 0.03 0.1 0.3 1 3 10 30];
+error_min = inf;
 
 for temp_c = values
   for temp_sigma = values
     % Train and evaluate model on cross validation set
     model = svmTrain(X, y, temp_c, @(x1, x2) gaussianKernel(x1, x2, temp_sigma));
     error = mean(double(svmPredict(model, Xval) ~= yval));
+    % prediction error
+    if( error <= error_min )
+    % updated error_min
+      C = temp_c;
+      sigma = temp_sigma;
+      error_min = error;
+    end
   end
 end
 

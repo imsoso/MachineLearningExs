@@ -26,7 +26,14 @@ sigma = 0.3;
 
 
 
+values = [0.01 0.03 0.1 0.3 1 3 10 30];
 
+for temp_c = values
+  for temp_sigma = values
+    % Train and evaluate model on cross validation set
+    model = svmTrain(X, y, temp_c, @(x1, x2) gaussianKernel(x1, x2, temp_sigma));
+  end
+end
 
 
 % =========================================================================

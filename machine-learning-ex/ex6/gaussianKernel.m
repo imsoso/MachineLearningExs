@@ -17,6 +17,7 @@ sim = 0;
 %
 
 error = sum((x1 - x2) .^ 2);
+sim = exp(- error / 2 / (sigma ^ 2));
 
 
 

@@ -19,6 +19,9 @@ Z = zeros(size(X, 1), K);
 %
 
 
+for k = 1:K
+    Ureduce = U(:,1:k);     % take the first k directions
+end
 
 
 % =============================================================

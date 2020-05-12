@@ -21,6 +21,7 @@ S = zeros(n);
 %
 
 
+SIGMA = X' * X / m
 
 
 

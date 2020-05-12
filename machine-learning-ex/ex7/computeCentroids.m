@@ -31,6 +31,7 @@ centroids = zeros(K, n);
 
 for k = 1:K
     idx_k = find(idx == k);
+    centroids(k, :) = mean(X(idx_k, :));
 end
 
 

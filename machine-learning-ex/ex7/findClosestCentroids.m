@@ -23,9 +23,14 @@ idx = zeros(size(X,1), 1);
 m = size(X, 1);
 
 for i = 1:m
+  min_distance = inf;
   for k = 1:K
     distance = X(i, :) - centroids(k, :);
     distance_square = distance * distance';
+    if (distance_square < min_distance)
+      idx(i) = k;
+      min_distance = distance_square;
+    end
   end
 end
 

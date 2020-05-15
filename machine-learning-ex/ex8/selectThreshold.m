@@ -28,6 +28,12 @@ cvPredictions = (pval < epsilon)
 
 
 
+% number of false positives
+fp = sum((cvPredictions == 1) & (yval == 0));
+% number of true positives
+tp = sum((cvPredictions == 1) & (yval == 1));
+% number of false negatives
+fn = sum((cvPredictions == 0) & (yval == 1));
 
 
 

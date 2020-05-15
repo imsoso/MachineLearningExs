@@ -22,6 +22,7 @@ sigma2 = zeros(n, 1);
 %
 
 
+mu = 1 / m * sum(X)';  
 
 
 

@@ -23,6 +23,9 @@ sigma2 = zeros(n, 1);
 
 
 mu = 1 / m * sum(X)';  
+for i = 1 : m
+    sigma2 = sigma2 + 1 / m * (X(i , :)' - mu) .^ 2;
+end
 
 
 

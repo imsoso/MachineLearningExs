@@ -38,6 +38,8 @@ fn = sum((cvPredictions == 0) & (yval == 1));
 precision = tp / (tp + fp);
 recall = tp / (tp + fn);
 
+% "best" epsilon based  on the  score
+F1 = 2 * precision * recall / (precision + recall);
 
 
 

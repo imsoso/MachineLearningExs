@@ -35,6 +35,8 @@ tp = sum((cvPredictions == 1) & (yval == 1));
 % number of false negatives
 fn = sum((cvPredictions == 0) & (yval == 1));
 
+precision = tp / (tp + fp);
+recall = tp / (tp + fn);
 
 
 

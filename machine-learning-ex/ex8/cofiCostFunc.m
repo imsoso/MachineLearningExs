@@ -59,6 +59,8 @@ Theta_grad = errorFactor' * X;
 J = J + lambda / 2 * sum(sum(Theta .^ 2));
 
 
+% Regularize Movie param
+J = J + lambda / 2 * sum(sum(X .^ 2));
 
 
 

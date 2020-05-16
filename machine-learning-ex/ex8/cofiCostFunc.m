@@ -49,6 +49,7 @@ errorFactorSquare = ratingErrorSquare .* R;
 
 J = 1/2 * sum(sum(errorFactorSquare));
 
+errorFactor = ratingError .* R;
 
 
 

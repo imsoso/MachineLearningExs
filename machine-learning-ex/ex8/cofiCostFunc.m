@@ -43,6 +43,7 @@ Theta_grad = zeros(size(Theta));
 
 
 predictedRatings = X * Theta';
+ratingErrorSquare = (predictedRatings - Y) .^ 2;
 
 
 

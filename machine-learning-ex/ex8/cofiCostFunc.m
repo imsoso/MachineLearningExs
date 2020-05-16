@@ -52,6 +52,8 @@ J = 1/2 * sum(sum(errorFactorSquare));
 errorFactor = ratingError .* R;
 % The X gradient is the product of the error factor and the Theta matrix
 X_grad = errorFactor * Theta;
+% The Theta gradient is the product of the error factor and the X matrix
+Theta_grad = errorFactor' * X;
 
 
 

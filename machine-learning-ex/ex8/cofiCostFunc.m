@@ -46,6 +46,7 @@ predictedRatings = X * Theta';
 ratingErrorSquare = (predictedRatings - Y) .^ 2;
 errorFactor = ratingError .* R;
 
+J = 1/2 * sum(sum(errorFactor));
 
 
 

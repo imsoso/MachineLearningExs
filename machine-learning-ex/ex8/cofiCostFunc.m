@@ -55,6 +55,8 @@ X_grad = errorFactor * Theta;
 % The Theta gradient is the product of the error factor and the X matrix
 Theta_grad = errorFactor' * X;
 
+% Regularize User param
+J = J + lambda / 2 * sum(sum(Theta .^ 2));
 
 
 
